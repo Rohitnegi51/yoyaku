@@ -9,7 +9,7 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = {
+export default [
   ...compat.config({
     extends:[
       'next/core-web-vitals', 
@@ -23,6 +23,4 @@ const eslintConfig = {
       'react/no-escape-entities':'off',
     },
   }),
-};
-
-export default eslintConfig;
+];

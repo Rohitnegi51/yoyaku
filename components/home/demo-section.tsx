@@ -3,7 +3,7 @@ export default function DemoSection() {
   return (
     <section className="relative">
       <div className="py-12 lg:py-24 max-w-5xl mx-auto sm:px-6 lg:px-8 lg:pt-12">
-        <div className="pointer-events-none absolute inset-0 -z-10 transform-gpu overflow-hidden blur-3xl">
+        <div className="pointer-events-none absolute inset-0 -z-10 transform-gpu overflow-hidden blur-3xl"aria-hidden="true" >
           <div
             className="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500  opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{

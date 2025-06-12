@@ -1,9 +1,14 @@
-import { Button } from "@/components/ui/button";
+
 import HeroSection from "@/components/home/hero-section";
+import BgGradient from "@/components/common/Bg-gradient"; 
 export default function Home() {
   return (
-    <div className="relative ">
-      <HeroSection />
+    <div className="relative w-full ">
+      <BgGradient/>
+      <div className="flex flex-col">
+        <HeroSection />
+      </div>
+      
       {/* <DemoSection/> */}
       {/* <HowItWorksSection/> */}
       {/*  <PricingSection/> */}

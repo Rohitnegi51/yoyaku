@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner"
 import type { Metadata } from "next";
 import { Source_Sans_3 as FontSans } from "next/font/google";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <Toaster position="top-right"/>
         
       </body>
     </html>

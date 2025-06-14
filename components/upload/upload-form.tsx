@@ -4,6 +4,7 @@ import React from "react";
 import { z } from "zod";
 import { useUploadThing } from "@/utils/uploadthing";
 import { toast } from "sonner";
+import { generatePdfSummary } from "@/actions/upload-actions";
 const schema = z.object({
   file: z
     .instanceof(File, { message: "Invalid File" })
@@ -67,11 +68,15 @@ export default function UploadForm() {
         return;
     }
 
-    toast.success('📄 Processing PDF',{
+    toast.message('📄 Processing PDF',{
+        icon: null ,
         description: 'Hang tight! Our AI is reading through your document! ✨'
     })
 
     //parse the pdf using lang chain
+
+    const summary = await generatePdfSummary(resp);
+    console.log({summary})
     //summarize the pdf using AI
     //save the summary to the database
     //redirect to the id summary page
